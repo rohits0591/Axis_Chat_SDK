@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Axis Direct | Trade, Invest, Grow (Test Environment)</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="chat-widget.css" />
+</head>
+<body>
+
+  <div class="env-banner">TEST / STAGING ENVIRONMENT — NOT FOR PUBLIC USE — Webex Connect JS SDK Widget QA</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Axis<span>Direct</span></div>
+      <nav class="nav">
+        <a href="#markets">Markets</a>
+        <a href="#invest">Invest</a>
+        <a href="#trade">Trade</a>
+        <a href="#support">Support</a>
+      </nav>
+      <div class="header-cta">
+        <div id="test-login-wrap" class="test-login-wrap">
+          <button id="test-login-btn" class="btn btn-ghost" type="button">Login</button>
+          <div id="test-login-status" class="test-login-status" hidden>
+            <span id="test-login-name"></span>
+            <button id="test-logout-btn" type="button" class="test-logout-btn">Log out</button>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary">Open Account</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Broking &middot; Investing &middot; Advisory</p>
+        <h1>Markets move fast.<br/>So do we.</h1>
+        <p class="hero-sub">One account for equities, mutual funds, F&amp;O and insurance — with research-backed calls and support that actually picks up.</p>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary btn-lg">Open a free account</a>
+          <a href="#support" class="btn btn-ghost btn-lg">Talk to support</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="ticker-card">
+          <div class="ticker-row"><span>NIFTY 50</span><span class="up">24,812.35 <small>+0.62%</small></span></div>
+          <div class="ticker-row"><span>SENSEX</span><span class="up">81,664.10 <small>+0.58%</small></span></div>
+          <div class="ticker-row"><span>BANK NIFTY</span><span class="down">51,203.80 <small>-0.21%</small></span></div>
+          <div class="ticker-row"><span>USD/INR</span><span class="up">86.42 <small>+0.09%</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="invest" class="products">
+    <div class="container">
+      <h2>Everything you need, in one place</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-index">01</div>
+          <h3>Equities &amp; F&amp;O</h3>
+          <p>Zero-hassle order execution across NSE and BSE, with margin trading and bracket orders built in.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-index">02</div>
+          <h3>Mutual Funds</h3>
+          <p>Direct plans, SIPs and goal-based baskets curated by our research desk — no hidden commissions.</p>
+        </div>
+        <div class="product-card">
+          <div class="product-index">03</div>
+          <h3>Insurance</h3>
+          <p>Term, health and motor cover comparisons from leading insurers, bought and managed in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support" class="support">
+    <div class="container support-inner">
+      <div>
+        <p class="eyebrow">We're here to help</p>
+        <h2>Stuck on a trade, a KYC step, or a claim?</h2>
+        <p class="hero-sub">Chat with our support team using the widget in the corner — this instance is wired up for Webex Connect JS SDK QA, so conversations here route to the test asset (AX21152542), not production.</p>
+      </div>
+      <ul class="support-points">
+        <li>Account opening &amp; KYC</li>
+        <li>Order &amp; margin queries</li>
+        <li>Fund transfers</li>
+        <li>Insurance claims</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="logo">Axis<span>Direct</span></div>
+      <p>Dummy site for internal QA only. Not affiliated with, and not representing, the production Axis Direct website.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       CUSTOM CHAT WIDGET — built on the Webex Connect JavaScript SDK
+       (not the pre-styled imichatinit.js widget from the other page)
+       ============================================================ -->
+
+  <button id="cw-launcher" class="cw-launcher" aria-label="Open chat">💬</button>
+
+  <div id="cw-panel" class="cw-panel" hidden>
+
+    <div class="cw-header">
+      <div class="cw-lang-wrap">
+        <button id="cw-lang-toggle" class="cw-lang" type="button">En <span class="cw-caret">▾</span></button>
+        <div id="cw-lang-menu" class="cw-lang-menu" hidden>
+          <button type="button" data-lang="en">English</button>
+          <button type="button" data-lang="hi">हिन्दी (Hindi)</button>
+          <button type="button" data-lang="mr">मराठी (Marathi)</button>
+        </div>
+      </div>
+      <div class="cw-window-actions">
+        <button id="cw-end-chat" class="cw-end-chat-btn" type="button">End Chat</button>
+        <button id="cw-minimize" aria-label="Minimize chat">–</button>
+        <button id="cw-close" aria-label="Close chat">×</button>
+      </div>
+    </div>
+
+    <div class="cw-body" id="cw-body">
+
+      <div class="cw-carousel">
+        <button class="cw-arrow cw-arrow-left" aria-label="Previous">‹</button>
+        <div class="cw-promo-card">
+          <div class="cw-promo-text">
+            <strong>Scan &amp; connect with Our<br/>Whatsapp Bot !</strong>
+            <p>Customers can now send 'Hi' to<br/>7777096543</p>
+          </div>
+          <div class="cw-qr" aria-hidden="true"></div>
+        </div>
+        <button class="cw-arrow cw-arrow-right" aria-label="Next">›</button>
+      </div>
+
+      <div class="cw-brand">
+        <div class="cw-avatar">A</div>
+        <h3>Welcome to AxisDirect</h3>
+        <p class="cw-disclaimer">Please do not share any sensitive data e.g. Aadhaar, PAN,<br/>PIN etc. as applicable.</p>
+      </div>
+
+      <div class="cw-thread" id="cw-thread">
+        <!-- Messages render here dynamically via chat-widget.js,
+             driven by real SDK events (onMessageReceived) once
+             connected to asset AX21152542. -->
+        <div class="cw-status" id="cw-status">Connecting…</div>
+      </div>
+
+    </div>
+
+    <div class="cw-footer">
+      <button id="cw-emoji-toggle" class="cw-icon-btn" type="button" aria-label="Insert emoji">🙂</button>
+      <button id="cw-attach-toggle" class="cw-icon-btn" type="button" aria-label="Attach a file">📎</button>
+      <input type="file" id="cw-file-input" hidden />
+      <input type="text" id="cw-input" class="cw-input" placeholder="Post a Query..." autocomplete="off" />
+      <button id="cw-send" class="cw-send" aria-label="Send">➤</button>
+      <div id="cw-emoji-panel" class="cw-emoji-panel" hidden></div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================
+       WEBEX CONNECT JAVASCRIPT SDK — per Quickstart guide
+       https://developers.webexconnect.io/docs/javascript-sdk-quickstart-guide
+       ============================================================ -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js" onerror="console.error('[widget] FAILED TO LOAD: jQuery from code.jquery.com — check network/ad-blocker/CSP')"></script>
+  <script src="assets/js/imi-environments.js" onerror="console.error('[widget] FAILED TO LOAD: assets/js/imi-environments.js — check deploy path')"></script>
+  <script src="assets/js/webex-connect-sdk.min.js" onerror="console.error('[widget] FAILED TO LOAD: assets/js/webex-connect-sdk.min.js — check deploy path')"></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (typeof IMI === "undefined") {
+        console.error("[widget] All scripts requested successfully but window.IMI is still undefined — likely a JS execution error inside webex-connect-sdk.min.js or imi-environments.js. Check the Console for a red stack trace above this line.");
+      } else {
+        console.log("[widget] IMI SDK loaded OK:", typeof IMI);
+      }
+    });
+  </script>
+  <script src="test-login.js"></script>
+  <script src="chat-widget.js"></script>
+
+</body>
+</html>
